@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="872.0" prefWidth="1365.0" style="-fx-background-color: #bdc3c7;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.DashboardMenuController">
+   <children>
+      <VBox prefHeight="880.0" prefWidth="324.0" style="-fx-background-color: #1dd1a1;">
+         <children>
+            <Label prefHeight="78.0" prefWidth="324.0" style="-fx-background-color: #10ac84;" text="     Eco Trash" textAlignment="RIGHT" textFill="#eedede">
+               <font>
+                  <Font name="Lato Black" size="51.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="6.0" prefWidth="324.0" />
+            <HBox prefHeight="60.0" prefWidth="324.0">
+               <children>
+                  <Button fx:id="btnBeranda" mnemonicParsing="false" onAction="#handleButtonActionberanda" prefHeight="55.0" prefWidth="324.0" style="-fx-background-color: #1dd9a8;" text="Beranda" textFill="#393939">
+                     <font>
+                        <Font name="Lato Black" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="114.0" prefHeight="60.0" prefWidth="324.0">
+               <children>
+                  <Button fx:id="btndatasampah" mnemonicParsing="false" onAction="#handleButtonActiondatasampah" prefHeight="55.0" prefWidth="324.0" style="-fx-background-color: #1dd9a8;" text="Pengelolaan Data Sampah" textFill="#393939">
+                     <font>
+                        <Font name="Lato Black" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="180.0" prefHeight="60.0" prefWidth="324.0">
+               <children>
+                  <Button fx:id="btngrafik" mnemonicParsing="false" onAction="#handleButtonActiongrafik" prefHeight="55.0" prefWidth="324.0" style="-fx-background-color: #1dd9a8;" text="Grafik" textFill="#393939">
+                     <font>
+                        <Font name="Lato Black" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="240.0" prefHeight="60.0" prefWidth="324.0">
+               <children>
+                  <Button fx:id="btnprediksi" mnemonicParsing="false" onAction="#handleButtonActionprediksi" prefHeight="55.0" prefWidth="324.0" style="-fx-background-color: #1dd9a8;" text="Prediksi Data Sampah" textFill="#393939">
+                     <font>
+                        <Font name="Lato Black" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane fx:id="paneBeranda" layoutX="324.0" layoutY="55.0" prefHeight="825.0" prefWidth="1314.0" visible="false">
+         <children>
+            <ImageView fitHeight="747.0" fitWidth="1314.0" opacity="0.54">
+               <effect>
+                  <GaussianBlur radius="7.8" />
+               </effect>
+               <image>
+                  <Image url="@../ecotrash/gambar/Sampah-640x400.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutY="747.0" prefHeight="78.0" prefWidth="1314.0" style="-fx-background-color: green;" />
+            <ImageView fitHeight="60.0" fitWidth="51.0" layoutX="1249.0" layoutY="756.0">
+               <image>
+                  <Image url="@../ecotrash/gambar/yogyakarta.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="53.0" layoutY="756.0" text="ecotrash@gmail.com" textFill="#f2f2f2" />
+            <Label layoutX="52.0" layoutY="786.0" text="085866650099" textFill="#ebebeb" />
+            <Label layoutX="449.0" layoutY="756.0" text="Desa Umbulmartani, Kecamatan Ngemplak, Kabupaten Sleman" textFill="WHITE" />
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="1168.0" layoutY="757.0">
+               <image>
+                  <Image url="@../ecotrash/gambar/sdg.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="519.0" layoutY="11.0" prefHeight="21.0" prefWidth="277.0" text="Beranda">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text layoutX="30.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sampah adalah material sisa suatu aktivitas yang tidak dinginkan setelah berakhirnya suatu proses." wrappingWidth="390.6708984375">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <Label layoutX="601.0" layoutY="776.0" text="Provinsi Yogyakarta" textFill="WHITE" />
+            <Label layoutX="637.0" layoutY="800.0" text="55584" textFill="WHITE" />
+            <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="14.0" layoutY="756.0">
+               <image>
+                  <Image url="@../ecotrash/gambar/email2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="14.0" layoutY="785.0">
+               <image>
+                  <Image url="@../ecotrash/gambar/telfon.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="28.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengelolaan sampah merupakan kegiatan yang dimaksud untuk mengurangi jumlah sampah, disamping memanfaatkan nilai yang masih terkandung dalam sampah itu sendiri (bahan daur ulang, produk lain dan energi)" textAlignment="JUSTIFY" wrappingWidth="390.6708984375">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="858.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maka dengan itu kami hadir untuk mengatasi permasalahan tersebut dengan memantau jumlah sampah di setiap kabupaten , dengan mengetahui jumlah sampah tersebut, maka dari pengelola sampah Yogyakarta dapat menentukan langkah-langkat yang tepat untuk menangani jumlah sampah tersebut" wrappingWidth="390.6708984375">
+               <font>
+                  <Font size="24.0" />
+               </font></Text>
+            <Text layoutX="28.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Di Yogyakarta setiap tahunnya banyak wisatawan yang datang dari dalam maupun luar negeri, dan itu akan meninggal sampah-sampah yang jika tidak dapat dikelola akan menimbulkan masalah baru di waktu yang akan datang" wrappingWidth="390.6708984375">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneDataSampah" layoutX="324.0" layoutY="55.0" prefHeight="825.0" prefWidth="1314.0" visible="false">
+         <children>
+            <Label layoutX="43.0" layoutY="135.0" text="Nama Kota">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="181.0" text="Jumlah Penduduk">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="224.0" text="Kategori Sampah">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="269.0" text="Jumlah Sampah Masuk">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="266.0" layoutY="135.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="266.0" layoutY="181.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="266.0" layoutY="224.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="266.0" layoutY="269.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="538.0" layoutY="226.0" text="Jumlah Sampah Tidak Terkelola">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="545.0" layoutY="183.0" text="Jumlah Sampah Terkelola">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="543.0" layoutY="137.0" text="Tanggal Masuk">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cbnmkota" layoutX="303.0" layoutY="135.0" prefHeight="31.0" prefWidth="186.0" />
+            <TextField fx:id="txtjmlpddk" layoutX="303.0" layoutY="181.0" />
+            <ChoiceBox fx:id="cbktgrsampah" layoutX="303.0" layoutY="224.0" prefHeight="31.0" prefWidth="186.0" />
+            <TextField fx:id="txtjmlsampahmasuk" layoutX="303.0" layoutY="269.0" />
+            <TextField fx:id="txtjmlterkelola" layoutX="791.0" layoutY="186.0" />
+            <TextField fx:id="txtjmlnotterkelola" layoutX="827.0" layoutY="229.0" />
+            <DatePicker fx:id="dptglmasuk" layoutX="791.0" layoutY="135.0" prefHeight="31.0" prefWidth="186.0" />
+            <Button fx:id="buttonadd" layoutX="548.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleButtonActionadd" prefHeight="43.0" prefWidth="124.0" text="Add">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Line endX="630.0" layoutX="668.0" layoutY="86.0" startX="-650.0" />
+            <Label layoutX="631.0" layoutY="24.0" text="Data">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <TableView fx:id="tvsampah" layoutX="61.0" layoutY="483.0" onMouseClicked="#itemsClick" prefHeight="319.0" prefWidth="919.0">
+              <columns>
+                <TableColumn fx:id="tcno" prefWidth="39.0" text="No" />
+                <TableColumn fx:id="tcnamakota" prefWidth="100.0" text="Nama Kota" />
+                  <TableColumn fx:id="tcpnddk" prefWidth="81.0" text="Jumlah Penduduk" />
+                  <TableColumn fx:id="tckategorisampah" prefWidth="108.0" text="Kategori Sampah" />
+                  <TableColumn fx:id="tcjmlsampahmasuk" minWidth="0.0" prefWidth="123.0" text="Jumlah Sampah Masuk" />
+                  <TableColumn fx:id="tctglmasuk" prefWidth="117.0" text="Tanggal Masuk" />
+                  <TableColumn fx:id="tcjmlterkelola" prefWidth="157.0" text="Jumlah Sampah Terkelola" />
+                  <TableColumn fx:id="tcjmlnotterkelola" prefWidth="187.0" text="Jumlah Sampah Tidak Terkelola" />
+              </columns>
+            </TableView>
+            <Label layoutX="61.0" layoutY="439.0" text="Daftar Data :">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonupdate" layoutX="684.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleButtonActionupdate" prefHeight="43.0" prefWidth="124.0" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttondelete" layoutX="827.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleButtonActionadelete" prefHeight="43.0" prefWidth="124.0" text="Delete">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneGrafik" layoutX="324.0" layoutY="55.0" prefHeight="825.0" prefWidth="1030.0">
+         <children>
+            <Label alignment="CENTER" layoutX="527.0" layoutY="21.0" prefHeight="55.0" prefWidth="260.0" text="Grafik">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font></Label>
+            <LineChart fx:id="lcData" layoutX="13.0" layoutY="182.0" prefHeight="458.0" prefWidth="725.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Label layoutX="45.0" layoutY="63.0" text="Informasi data sampah dalam bentuk LineChart :">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutY="753.0" prefHeight="72.0" prefWidth="1314.0" />
+            <Label layoutX="45.0" layoutY="104.0" text="Nama Kabupaten">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbNamaKabupaten" layoutX="45.0" layoutY="143.0" onAction="#klikFilter" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="panePrediksi" layoutX="324.0" layoutY="55.0" prefHeight="825.0" prefWidth="1314.0" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutX="545.0" layoutY="14.0" prefHeight="55.0" prefWidth="224.0" text="Prediksi">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <Line endX="645.0" layoutX="657.0" layoutY="82.0" startX="-645.0" />
+            <Label layoutX="14.0" layoutY="103.0" prefHeight="21.0" prefWidth="124.0" text="Namka Kota :" />
+            <ChoiceBox layoutX="124.0" layoutY="98.0" prefHeight="31.0" prefWidth="202.0" />
+            <LineChart layoutX="348.0" layoutY="191.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Label layoutX="14.0" layoutY="145.0" text="Pilih Prediksi :" />
+            <ChoiceBox layoutX="124.0" layoutY="140.0" prefHeight="31.0" prefWidth="202.0" />
+         </children>
+      </Pane>
+      <VBox layoutX="116.0" layoutY="8.0" prefHeight="55.0" prefWidth="1235.0" style="-fx-background-color: #009688;">
+         <children>
+            <HBox prefHeight="55.0" prefWidth="1270.0">
+               <children>
+                  <Label prefHeight="55.0" prefWidth="1046.0" />
+                  <Button fx:id="btnlogout" mnemonicParsing="false" onAction="#handleButtonActionlogout" prefHeight="55.0" prefWidth="188.0" style="-fx-background-color: #607D8B;" text="LogOut" textFill="#dadada">
+                     <font>
+                        <Font name="Lato Black" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

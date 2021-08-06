@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="tutup" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1371.0" style="-fx-background-color: #bdc3c7;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardMenuController">
+   <children>
+      <VBox layoutY="-14.0" prefHeight="722.0" prefWidth="324.0" style="-fx-background-color: #1dd1a1; -fx-border-color: black;">
+         <children>
+            <Label prefHeight="91.0" prefWidth="322.0" style="-fx-background-color: #10ac84;" text="     Eco Trash" textAlignment="RIGHT" textFill="#eedede">
+               <font>
+                  <Font name="Lato Black" size="51.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="26.0" prefWidth="322.0" />
+            <HBox prefHeight="0.0" prefWidth="322.0" />
+            <HBox layoutX="10.0" layoutY="114.0" prefHeight="67.0" prefWidth="322.0">
+               <children>
+                  <VBox />
+                  <ImageView fitHeight="53.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/home-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnBeranda" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonActionberanda" prefHeight="59.0" prefWidth="261.0" style="-fx-background-color: #1dd9a8; -fx-background-color: green;" text=" Beranda" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="180.0" prefHeight="61.0" prefWidth="322.0">
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/500px-recycling_symbol-svg.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btndatasampah" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonActiondatasampah" prefHeight="54.0" prefWidth="262.0" style="-fx-background-color: green;" text="Pengelolaan Data Sampah" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="240.0" prefHeight="68.0" prefWidth="322.0">
+               <children>
+                  <HBox prefHeight="75.0" prefWidth="322.0">
+                     <children>
+                        <ImageView fitHeight="53.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../gambar/grafik.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btngrafik" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonActiongrafik" prefHeight="52.0" prefWidth="262.0" style="-fx-background-color: green;" text="Grafik" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane fx:id="paneBeranda" layoutX="324.0" layoutY="78.0" prefHeight="597.0" prefWidth="1045.0">
+         <children>
+            <ImageView fitHeight="568.0" fitWidth="1126.0" layoutX="27.0" layoutY="-15.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/LOGO%20FIX.png" />
+               </image>
+            </ImageView>
+            <Label layoutY="552.0" prefHeight="78.0" prefWidth="1045.0" style="-fx-background-color: #10ac84;" />
+            <Label alignment="CENTER" layoutX="431.0" layoutY="14.0" prefHeight="21.0" prefWidth="277.0" text="Beranda">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="386.0" layoutY="562.0" text="Desa Umbulmartani, Kecamatan Ngemplak, Kabupaten Sleman" textFill="#f8f8f8" />
+            <Label layoutX="474.0" layoutY="587.0" text="Provinsi Yogyakarta" textFill="WHITE" />
+            <Label layoutX="503.0" layoutY="607.0" text="55584" textFill="WHITE" />
+            <Label layoutX="42.0" layoutY="562.0" text="ecotrash@gmail.com" textFill="#f8f8f8" />
+            <Label layoutX="42.0" layoutY="599.0" text="085866650099" textFill="#f8f8f8" />
+            <ImageView fitHeight="67.0" fitWidth="220.0" layoutX="978.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/Coat_of_arms_of_Yogyakarta.svg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="32.0" layoutX="8.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/Gmail-Logo-57e3e0b75f9b586c35507780.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="10.0" layoutY="596.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/download.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="27.0" layoutY="122.0" text="Aplikasi ini akan memantau jumlah sampah di 5 Kabupaten yang ada di Daerah Istimewa Yogyakarta">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="155.0" text="1. Sleman">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label layoutX="66.0" layoutY="179.0" text="2. Bantul">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="250.0" text="5. Kota Yogyakarta">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="202.0" text="3. Gunung Kidul">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="225.0" text="4. Kulon Progo">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Text layoutX="153.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Di Yogyakarta masih sering dijumpai sampah yang belum terkelola dan masih susah untuk di data setiap hari , tapi tenang saja ada aplikasi EcoTrash yang siap membantu untuk mengelola data sampah . Aplikasi ini memudahkan Pemerintah dalam mengololaan data sampah di kota Yogyakarta. Fitur-fitur yang dimiliki oleh EcoTrash ini seperti memasukan data sampah dan mengelolaan data sampah terkelola dan tidak terkelola." textAlignment="JUSTIFY" wrappingWidth="739.9999994114041">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Line endX="480.0" layoutX="562.0" layoutY="67.0" startX="-558.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneDataSampah" layoutX="324.0" layoutY="77.0" prefHeight="629.0" prefWidth="1045.0" visible="false">
+         <children>
+            <Label layoutX="42.0" layoutY="88.0" text="Nama Kota">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="134.0" text="Jumlah Penduduk">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="177.0" text="Kategori Sampah">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="222.0" text="Jumlah Sampah Masuk">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="79.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="125.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="168.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="213.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="808.0" layoutY="169.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="808.0" layoutY="126.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="807.0" layoutY="81.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="590.0" layoutY="178.0" text="Jumlah Sampah Tidak Terkelola">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="590.0" layoutY="135.0" text="Jumlah Sampah Terkelola">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="590.0" layoutY="89.0" text="Tanggal Masuk">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cbnmkota" layoutX="239.0" layoutY="83.0" prefHeight="31.0" prefWidth="186.0" />
+            <TextField fx:id="txtjmlpddk" layoutX="239.0" layoutY="132.0" prefHeight="25.0" prefWidth="186.0" />
+            <ChoiceBox fx:id="cbktgrsampah" layoutX="239.0" layoutY="176.0" prefHeight="31.0" prefWidth="186.0" />
+            <TextField fx:id="txtjmlsampahmasuk" layoutX="239.0" layoutY="216.0" prefHeight="25.0" prefWidth="186.0" />
+            <TextField fx:id="txtjmlterkelola" layoutX="824.0" layoutY="133.0" />
+            <TextField fx:id="txtjmlnotterkelola" layoutX="824.0" layoutY="174.0" />
+            <DatePicker fx:id="dptglmasuk" layoutX="824.0" layoutY="82.0" prefHeight="31.0" prefWidth="149.0" />
+            <Button fx:id="buttonadd" alignment="TOP_LEFT" layoutX="565.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleButtonActionadd" prefHeight="21.0" prefWidth="124.0" text="    Add" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/add-3%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Line endX="370.0" layoutX="668.0" layoutY="55.0" startX="-659.0" />
+            <Label layoutX="519.0" layoutY="9.0" text="Data">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <Button fx:id="buttonupdate" alignment="TOP_LEFT" layoutX="733.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleButtonActionupdate" prefHeight="31.0" prefWidth="124.0" text="  Update">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/edit-1%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="buttondelete" alignment="TOP_LEFT" layoutX="896.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonActionadelete" prefHeight="21.0" prefWidth="124.0" text="  Delete">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/garbage-1%20(3).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView fx:id="tvsampah" layoutX="20.0" layoutY="361.0" onMouseClicked="#itemsClick" prefHeight="248.0" prefWidth="998.0" style="-fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="tcno" prefWidth="30.0" text="No" />
+                <TableColumn fx:id="tcnamakota" prefWidth="138.0" text="Nama Kota" />
+                  <TableColumn fx:id="tcpnddk" prefWidth="108.0" text="Jumlah Penduduk" />
+                  <TableColumn fx:id="tckategorisampah" prefWidth="113.0" text="Kategori Sampah" />
+                  <TableColumn fx:id="tcjmlsampahmasuk" minWidth="0.0" prefWidth="150.0" text="Jumlah Sampah Masuk" />
+                  <TableColumn fx:id="tctglmasuk" prefWidth="113.0" text="Tanggal Masuk" />
+                  <TableColumn fx:id="tcjmlterkelola" prefWidth="163.0" text="Jumlah Sampah Terkelola" />
+                  <TableColumn fx:id="tcjmlnotterkelola" prefWidth="182.0" text="Jumlah SampahTidak Terkelola" />
+              </columns>
+            </TableView>
+            <Label layoutX="61.0" layoutY="315.0" text="Daftar Data :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="401.0" layoutY="220.0" text="Ton" />
+            <Label layoutX="949.0" layoutY="137.0" text="Ton" />
+            <Label layoutX="949.0" layoutY="178.0" text="Ton" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneGrafik" layoutX="324.0" layoutY="77.0" prefHeight="629.0" prefWidth="1045.0" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutX="447.0" layoutY="9.0" prefHeight="55.0" prefWidth="260.0" text="Grafik">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <Label layoutY="753.0" prefHeight="72.0" prefWidth="1314.0" />
+            <Line endX="646.0" layoutX="390.0" layoutY="70.0" startX="-380.0" />
+            <Label layoutX="40.0" layoutY="126.0" text="Nama Kabupaten   :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbKabupaten" layoutX="195.0" layoutY="126.0" onAction="#handleGrafikItem" prefWidth="150.0" />
+            <BarChart fx:id="bcDataSampah" layoutX="435.0" layoutY="92.0" prefHeight="445.0" prefWidth="583.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <GridPane layoutX="22.0" layoutY="328.0" prefHeight="126.0" prefWidth="434.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="140.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="76.0" prefWidth="264.0" text="Median                    :" GridPane.rowIndex="2" />
+                  <Label prefHeight="102.0" prefWidth="143.0" text="Mean                       :" GridPane.rowIndex="1" />
+                  <Label prefHeight="64.0" prefWidth="200.0" text="Modus                     :" GridPane.rowIndex="3" />
+                  <Label prefHeight="61.0" prefWidth="166.0" text="Data Statistika">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gpMeanTerkelola" prefHeight="134.0" prefWidth="439.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="gpMedianTerkelola" prefHeight="134.0" prefWidth="439.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="gpModusTerkelola" prefHeight="51.0" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label prefHeight="93.0" prefWidth="343.0" text="Sampah Terkelola" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane layoutX="22.0" layoutY="454.0" prefHeight="138.0" prefWidth="443.0">
+               <children>
+                  <Label prefHeight="76.0" prefWidth="264.0" text="Median                    :" GridPane.rowIndex="2" />
+                  <Label prefHeight="102.0" prefWidth="143.0" text="Mean                       :" GridPane.rowIndex="1" />
+                  <Label prefHeight="64.0" prefWidth="200.0" text="Modus                     :" GridPane.rowIndex="3" />
+                  <Label prefHeight="71.0" prefWidth="140.0" text="Data Statistika">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gpMeanTidakTerkelola" prefHeight="134.0" prefWidth="439.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="gpMedianTidakTerkelola" prefHeight="134.0" prefWidth="439.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="gpModusTidakTerkelola" prefHeight="134.0" prefWidth="439.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label prefHeight="93.0" prefWidth="343.0" text="Sampah Tidak Terkelola" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane layoutX="31.0" layoutY="188.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="106.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="106.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="94.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="44.0" prefWidth="116.0" style="-fx-border-color: black;" text="1 - 500 Ton" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="49.0" prefWidth="137.0" style="-fx-border-color: black;" text="501 - 1000 Ton" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="53.0" prefWidth="122.0" style="-fx-border-color: black;" text="1001 - 1500 Ton" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="55.0" prefWidth="134.0" style="-fx-border-color: black;" text="Interva Data" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tidakInterval1" alignment="CENTER" prefHeight="66.0" prefWidth="128.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="tidakInterval2" alignment="CENTER" prefHeight="30.0" prefWidth="117.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="tidakInterval3" alignment="CENTER" prefHeight="48.0" prefWidth="123.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label fx:id="interval11" alignment="CENTER" prefHeight="66.0" prefWidth="128.0" style="-fx-border-color: black;" GridPane.rowIndex="1" />
+                  <Label fx:id="interval13" alignment="CENTER" prefHeight="66.0" prefWidth="128.0" style="-fx-border-color: black;" GridPane.rowIndex="3" />
+                  <Label fx:id="interval12" alignment="CENTER" prefHeight="66.0" prefWidth="128.0" style="-fx-border-color: black;" GridPane.rowIndex="2" />
+                  <Label fx:id="interval15" alignment="CENTER" prefHeight="66.0" prefWidth="128.0" style="-fx-border-color: black;" text="Tidak Terkelola" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="131.0" style="-fx-border-color: black;" text="Terkelola" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <VBox layoutX="324.0" prefHeight="78.0" prefWidth="1045.0" style="-fx-background-color: #009688;">
+         <children>
+            <HBox prefHeight="78.0" prefWidth="1056.0">
+               <children>
+                  <Label prefHeight="78.0" prefWidth="1037.0" />
+                  <Button fx:id="btnlogout" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleButtonActionlogout" prefHeight="81.0" prefWidth="315.0" style="-fx-background-color: green;" text="LogOut" textFill="#dadada">
+                     <font>
+                        <Font name="Lato Black" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+      <ImageView fitHeight="517.0" fitWidth="398.0" pickOnBounds="true">
+         <image>
+            <Image url="@../gambar/Lemon%20Twist.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="64.0" layoutY="71.0">
+         <children>
+            <ImageView fitHeight="376.0" fitWidth="270.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../gambar/Martini.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="352.0" prefWidth="256.0">
+               <children>
+                  <ImageView fitHeight="361.0" fitWidth="256.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../gambar/Ohhappiness.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="login" layoutX="110.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="8.0" prefWidth="126.0" style="-fx-background-color: f7ff00;" text="LOGIN">
+                     <font>
+                        <Font name="Leelawadee UI Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="23.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font name="Jogjakartype" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fontSmoothingType="LCD" layoutX="23.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                     <font>
+                        <Font name="Jogjakartype" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="user" layoutX="21.0" layoutY="168.0" prefHeight="25.0" prefWidth="215.0" promptText="username" />
+                  <PasswordField fx:id="pass" layoutX="21.0" layoutY="234.0" prefHeight="25.0" prefWidth="215.0" promptText="password" />
+                  <ImageView fitHeight="184.0" fitWidth="231.0" layoutX="13.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../gambar/logosementara.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="214.0" layoutY="238.0" opacity="0.33" pickOnBounds="true">
+                     <image>
+                        <Image url="@../gambar/ic_remove_red_eye_black_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <CheckBox fx:id="visible" layoutX="215.0" layoutY="238.0" mnemonicParsing="false" onAction="#visibleAction" opacity="0.0" prefHeight="0.0" prefWidth="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="slose" layoutX="378.0" layoutY="1.0" onMouseClicked="#SloceAction" prefHeight="17.0" prefWidth="0.0" text="X">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
